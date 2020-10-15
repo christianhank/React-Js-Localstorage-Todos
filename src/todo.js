@@ -9,6 +9,9 @@ function Todo(props){
         var test = arr1.filter((el) => el.id !== id)
         props.remove(test)  
     }
+    const line = () => {
+        
+    }
 
     return(
         <div className="row border my-3 shadow-sm rounded bg-white">
