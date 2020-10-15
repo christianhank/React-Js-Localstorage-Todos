@@ -5,12 +5,7 @@ import Main from "./main_screen";
 import Welcome from "./welcome_screen"
 
 function App() {
- 
-return(
-  <div>
-    hallo
-  </div>
-)
+
   
 const bool = () => {
     if(localStorage.getItem("name") !== null) {
@@ -37,8 +32,12 @@ const bool = () => {
 
   if (loggedIn === false){
     return (
+      <div>
+      hallo
 
       <Welcome login={setLoggedIn}  />
+    </div>
+      
     ) 
     
   }else {
