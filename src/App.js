@@ -6,27 +6,14 @@ import Welcome from "./welcome_screen"
 
 function App() {
 
-if(localStorage.getItem("name") == ""){
-  return(
-    <div>
-      hallo
-    </div>
-  )
-}
 
-  
-const bool = () => {
-    if(localStorage.getItem("name") !== null) {
-      return true
-    } else {
-      return false
-    }
-  }
+
+
 
 
 
   const checkName = () => {
-    if (localStorage.getItem("name") == ""){
+    if (localStorage.getItem("name") == null){
       return false
     } else {
       return true
@@ -41,7 +28,7 @@ const bool = () => {
   if (loggedIn === false){
     return (
       <div>
-      
+      hallo
 
       <Welcome login={setLoggedIn}  />
     </div>

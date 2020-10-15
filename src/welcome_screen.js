@@ -13,6 +13,7 @@ function Welcome(props) {
     setInput(e.currentTarget.value);
   }
 
+  localStorage.setItem("todos","")
 
   const formHandler = (name) => {
     if (name !== ""){

@@ -9,15 +9,13 @@ function Main(props){
     }
     var init = JSON.parse(localStorage.getItem("todos"))
     
-
-    
     const [todos,setTodos] = useState(init);
     const [heading,setHeading] = useState("")
     const [body,setBody] = useState("")
     
-    
+
     const abmelden = () =>{
-        localStorage.setItem("name","")
+        localStorage.removeItem("name")
         localStorage.setItem("todos","")
         props.lift(false)
     }
