@@ -6,12 +6,6 @@ import Welcome from "./welcome_screen"
 
 function App() {
 
-
-
-
-
-
-
   const checkName = () => {
     if (localStorage.getItem("name") == null){
       return false
@@ -28,7 +22,6 @@ function App() {
   if (loggedIn === false){
     return (
       <div>
-      hallo
 
       <Welcome login={setLoggedIn}  />
     </div>

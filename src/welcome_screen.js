@@ -27,6 +27,7 @@ function Welcome(props) {
     <div className="welcome container">
       <h1 className="text-center ">Willkommen, wie ist dein Name?</h1>
       <h5 className="text-center text-dark infoText">Deine Aufgaben werden bei <strong>Local ToDo</strong> lokal in deinem Browser gespeichert. Keine Anmeldung & keine Registrierung notwendig, dein Name reicht(selbst den bräuchte man nicht, macht das Ganze aber freundlicher)</h5>
+      <h6><a href="https://github.com/s0pht/">eine React App von Christian Hank</a></h6>
       <form onSubmit={e => { e.preventDefault(); }}>
       
         <div  className="mt-4 row rounded inputWelcome">
