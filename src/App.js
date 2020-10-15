@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+
 import './App.css';
+import Main from "./main_screen";
+import Welcome from "./welcome_screen"
 
 function App() {
-  return (
+ // erstes feld für den Namen, alles dahinter für die Tasks
+  
+  
+const bool = () => {
+    if(localStorage.getItem("name") !== null) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+
+
+  const checkName = () => {
+    if (localStorage.getItem("name") == ""){
+      return false
+    } else {
+      return true
+    }
+  }
+
+  const [loggedIn,setLoggedIn] = useState(checkName);
+  
+
+  // ab hier beginnt der eigentliche code
+
+  if (loggedIn === false){
+    return (
+
+      <Welcome login={setLoggedIn}  />
+    ) 
+    
+  }else {
+    
+
+      return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Main name={localStorage.getItem("name")} lift={setLoggedIn}/> 
     </div>
   );
+    }
+
+  
 }
 
 export default App;

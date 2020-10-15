@@ -1,0 +1,20 @@
+.main {
+    height: 100vh;
+    
+}
+
+.input {
+    border-radius: 25px;
+    border: 1px solid rgb(145, 145, 145);
+}
+
+.addBtn {
+    border-radius: 25px;
+
+}
+
+.deleteBtn{
+    border-radius: 100px;
+    height: 40px;
+    width: 40px;
+}

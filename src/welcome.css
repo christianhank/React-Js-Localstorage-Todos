@@ -1,0 +1,21 @@
+.welcome {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputWelcome{
+    border: 1px solid#d39e00;
+}
+
+.goButton {
+    border-radius: 0;
+}
+
+.infoText {
+    font-size: 13px;
+    position: absolute;
+    bottom: 10px;
+}
