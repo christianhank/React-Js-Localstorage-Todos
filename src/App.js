@@ -5,7 +5,7 @@ import Main from "./main_screen";
 import Welcome from "./welcome_screen"
 
 function App() {
- // erstes feld für den Namen, alles dahinter für die Tasks
+ 
   
   
 const bool = () => {
