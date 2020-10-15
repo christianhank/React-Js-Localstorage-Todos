@@ -6,7 +6,11 @@ import Welcome from "./welcome_screen"
 
 function App() {
  
-  
+return(
+  <div>
+    hallo
+  </div>
+)
   
 const bool = () => {
     if(localStorage.getItem("name") !== null) {
