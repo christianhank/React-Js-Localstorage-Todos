@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+https://local-todos.herokuapp.com/ 
+
+This is a small reactjs app i wrote to keep my todo list local and not saved on a server.
+Feel free to use the code for your projects!
 
 ## Available Scripts
 
