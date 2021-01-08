@@ -22,7 +22,7 @@ function Main(props){
 
     
     const addTodo = async (title,content) => {
-       if(content !== ""){
+       if(content !== "" || title !== ""){
             setTodos([...todos, {
             id: todos.length,
              title: title,
@@ -56,7 +56,7 @@ function Main(props){
 
     var begruessung = ["Guten Morgen","Hallo","Guten Abend"];
     var texte = ["Was steht heute an?","Soll ich die Peitsche schonmal rausholen?","Deine Aufgaben für heute:","Struktur ist das A und O !","Trau lieber deiner Todo Liste als deinem Glück."];
-    var randomNumber = Math.floor(Math.random() * 6);
+    var randomNumber = Math.floor(Math.random() * 5);
     console.log(randomNumber);
     console.log(texte[randomNumber]);
 
