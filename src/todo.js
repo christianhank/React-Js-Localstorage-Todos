@@ -22,8 +22,6 @@ function Todo(props){
             <div className="col-md-2 d-flex  justify-content-center align-items-center">
                 <button className="btn btn-danger deleteBtn" onClick={() => check()}>X</button>
             </div>
-       
-         
         </div>
     )
 }

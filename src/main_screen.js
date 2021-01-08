@@ -54,12 +54,16 @@ function Main(props){
             localStorage.setItem("todos",JSON.stringify(newArray)) 
          })
 
+
+    var texte = ["Was steht heute an?","Soll ich die Peitsche schonmal rausholen?","Deine Aufgaben für heute:","Struktur ist das A und O !","Trau lieber deiner Todo Liste als deinem Glück."];
+    var randomNumber = Math.floor(Math.random() * 6);
+
+
     return(
         <div className="main container py-5">
             <h1>Hi, {localStorage.getItem("name")}</h1>
-            <h2 className="text-dark">Was steht heute an?</h2>
+            <h2 className="text-dark">{texte[randomNumber]}</h2>
             <div className="row">
-            
             
             </div>
             <div className="row my-4">
