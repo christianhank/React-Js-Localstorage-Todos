@@ -54,10 +54,11 @@ function Main(props){
             localStorage.setItem("todos",JSON.stringify(newArray)) 
          })
 
-
+    var begruessung = ["Guten Morgen","Hallo","Guten Abend"];
     var texte = ["Was steht heute an?","Soll ich die Peitsche schonmal rausholen?","Deine Aufgaben für heute:","Struktur ist das A und O !","Trau lieber deiner Todo Liste als deinem Glück."];
     var randomNumber = Math.floor(Math.random() * 6);
-
+    console.log(randomNumber);
+    console.log(texte[randomNumber]);
 
     return(
         <div className="main container py-5">
