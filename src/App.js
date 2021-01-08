@@ -30,10 +30,10 @@ function App() {
     
   }else {
     
-
+    var randomNumber = Math.floor(Math.random() * 5);
       return (
     <div className="App">
-      <Main name={localStorage.getItem("name")} lift={setLoggedIn}/> 
+      <Main name={localStorage.getItem("name")} zahl={randomNumber} lift={setLoggedIn}/> 
     </div>
   );
     }

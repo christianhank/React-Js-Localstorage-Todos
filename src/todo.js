@@ -1,7 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import "./main.css"
+import Delete from "./loeschen.png"
+import Check from "./pruefen.png"
 
 function Todo(props){
+
+    var klasse = "done";
 
     const check = () => {
         const arr1 = props.all
@@ -10,17 +14,25 @@ function Todo(props){
         props.remove(test)  
     }
     const line = () => {
-        
+       props.remove(props.all.map(item => {
+           if(item.id === props.id){    
+               return {
+                ...item, completed: !item.completed
+               }
+           }
+           return item;
+       }))
     }
 
     return(
-        <div className="row border my-3 shadow-sm rounded bg-white">
-            <div className="col-md-10 p-3">
-                <h2>{props.titel}</h2>
-                        <p>{props.inhalt}</p>
+        <div className="row todo-main border todo my-3 shadow-sm bg-white">
+            <div className="col-md-10 pl-4 py-3">
+                <h4 className={`${props.complete ? 'done' : ''}`}>{props.titel}</h4>
+                        <p className={`mb-0 ${props.complete ? 'done' : ''}`}>{props.inhalt}</p>
             </div>
-            <div className="col-md-2 d-flex  justify-content-center align-items-center">
-                <button className="btn btn-danger deleteBtn" onClick={() => check()}>X</button>
+            <div className="col-md-2 todo-buttons todo d-flex bg-light border-left  justify-content-around align-items-center">
+                <div className="" onClick={line}><img className="icons" src={Check}/></div>
+                <div className="" onClick={() => check()}><img className="icons"  src={Delete}/></div>
             </div>
         </div>
     )

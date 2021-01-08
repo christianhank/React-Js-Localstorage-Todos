@@ -21,12 +21,14 @@ function Main(props){
     }
 
     
-    const addTodo = async (title,content) => {
+    const addTodo = (title,content) => {
+       
        if(content !== "" || title !== ""){
             setTodos([...todos, {
             id: todos.length,
              title: title,
-             content: content
+             content: content,
+             completed:false,
          }]); 
          setHeading("")
          setBody("")  
@@ -53,30 +55,52 @@ function Main(props){
             var newArray = todos;
             localStorage.setItem("todos",JSON.stringify(newArray)) 
          })
+         var begruessung = ["Guten Morgen","Hey","Guten Abend","Ab ins Bett"];
+         var time = new Date();
+        var hours = time.getHours();
+        
 
-    var begruessung = ["Guten Morgen","Hallo","Guten Abend"];
-    var texte = ["Was steht heute an?","Soll ich die Peitsche schonmal rausholen?","Deine Aufgaben für heute:","Struktur ist das A und O !","Trau lieber deiner Todo Liste als deinem Glück."];
-    var randomNumber = Math.floor(Math.random() * 5);
-    console.log(randomNumber);
-    console.log(texte[randomNumber]);
+         var textBegr = () => {
+             if (hours > 5 && hours < 12){
+                 return 0;
+             }
+             if (hours > 11 && hours <= 17){
+                return 1;
+            }
+            if (hours > 17 && hours <= 23){
+                return 2;
+            }
+            if (hours >= 0 && hours <= 5){
+                return 3;
+            }
+         }
+         
+         
+         var texte = ["Was steht heute an?","Hoffe du hattest bisher einen schönen Tag :)","Struktur ist das A und O!","Traue eher deiner Todo Liste als deinem Glück.","Lieber Arm ab als arm dran... oder?"]
+         
+
 
     return(
         <div className="main container py-5">
-            <h1>Hi, {localStorage.getItem("name")}</h1>
-            <h2 className="text-dark">{texte[randomNumber]}</h2>
+            <h1>{begruessung[textBegr()]}, {localStorage.getItem("name")}</h1>
+            <h2 className="text-dark">{texte[props.zahl]}</h2>
             <div className="row">
+            
             
             </div>
             <div className="row my-4">
-            <input className="input p-2 mx-2 text-center" type="text" onChange={onChangeHeading} placeholder="Überschrift" value={heading} name="Überschrift" />
-            <input className="input p-2 mx-2 text-center" type="text" onChange={onChangeBody} placeholder="Inhalt" value={body} name="Inhalt" />
-            <button className="btn btn-warning mx-2 addBtn" onClick={() => addTodo(heading,body)}>Notiz hinzufügen</button>
+                <form className="formular" onSubmit={(event) => event.preventDefault()} >
+                    <input className="input p-2  text-center" type="text" onChange={onChangeHeading} placeholder="Überschrift" value={heading} name="Überschrift" />
+                    <input className="input p-2  text-center" type="text" onChange={onChangeBody} placeholder="Inhalt" value={body} name="Inhalt" />
+                    <button className="btn btn-warning  addBtn" onClick={() => addTodo(heading,body)}>Notiz hinzufügen</button>
+                </form>
+            
             </div>
             
             
              <div className="my-4">{todos.map(todo => (
                  
-             <Todo remove={setTodos} id={todo.id}  key={todo.id} all={todos} titel={todo.title}  inhalt={todo.content}/>
+             <Todo remove={setTodos} id={todo.id} complete={todo.completed}  key={todo.id} all={todos} titel={todo.title}  inhalt={todo.content}/>
              ))}
             
              </div>
