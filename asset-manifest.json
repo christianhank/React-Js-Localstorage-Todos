@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/React-Js-Localstorage-Todos/static/css/main.5859f434.chunk.css",
+    "main.js": "/React-Js-Localstorage-Todos/static/js/main.e7e5245f.chunk.js",
+    "main.js.map": "/React-Js-Localstorage-Todos/static/js/main.e7e5245f.chunk.js.map",
+    "runtime-main.js": "/React-Js-Localstorage-Todos/static/js/runtime-main.e38283bb.js",
+    "runtime-main.js.map": "/React-Js-Localstorage-Todos/static/js/runtime-main.e38283bb.js.map",
+    "static/js/2.3399f4b2.chunk.js": "/React-Js-Localstorage-Todos/static/js/2.3399f4b2.chunk.js",
+    "static/js/2.3399f4b2.chunk.js.map": "/React-Js-Localstorage-Todos/static/js/2.3399f4b2.chunk.js.map",
+    "index.html": "/React-Js-Localstorage-Todos/index.html",
+    "precache-manifest.6ea761dec6429e1232acd02b1931e681.js": "/React-Js-Localstorage-Todos/precache-manifest.6ea761dec6429e1232acd02b1931e681.js",
+    "service-worker.js": "/React-Js-Localstorage-Todos/service-worker.js",
+    "static/css/main.5859f434.chunk.css.map": "/React-Js-Localstorage-Todos/static/css/main.5859f434.chunk.css.map",
+    "static/js/2.3399f4b2.chunk.js.LICENSE.txt": "/React-Js-Localstorage-Todos/static/js/2.3399f4b2.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/React-Js-Localstorage-Todos/static/media/bg.73800790.jpg",
+    "static/media/loeschen.png": "/React-Js-Localstorage-Todos/static/media/loeschen.837c7aa4.png",
+    "static/media/pruefen.png": "/React-Js-Localstorage-Todos/static/media/pruefen.e418339f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e38283bb.js",
+    "static/js/2.3399f4b2.chunk.js",
+    "static/css/main.5859f434.chunk.css",
+    "static/js/main.e7e5245f.chunk.js"
+  ]
+}
